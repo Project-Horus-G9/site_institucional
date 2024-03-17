@@ -68,7 +68,7 @@ body, html {
 .medium-text{
     height: 50vh;
     width: 45%;
-    font-size: larger;
+    font-size: 2.5vh;
     margin-top: 25vh;
     margin-left: 10vh;
     padding: 1%;
@@ -119,36 +119,118 @@ body, html {
     justify-content: space-between;
 
 }
-.serv-one{
-    height: 45vh;
-    width: 28%;
-    border-radius: 5px;
-    background-color: #f9f8f7;
+
+/* Cards */
+
+.container .card .icon-one {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
     background-image: url('Imagens/serv-one.png');
     background-position: center;
-    background-size: 30vh;
+    background-size: 10vh;
     background-repeat: no-repeat;
 }
-.serv-two{
-    height: 45vh;
-    width: 28%;
-    border-radius: 5px;
-    background-color: #f9f8f7;
+
+.container .card .icon-two {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
     background-image: url('Imagens/serv-two.png');
     background-position: center;
-    background-size: 36vh;
-    background-repeat: no-repeat;
+    background-size: 10vh;
+    background-repeat: no-repeat;;
 }
-.serv-tree{
-    height: 45vh;
-    width: 28%;
-    border-radius: 5px;
-    background-color: #f9f8f7;
+.container .card .icon-tree {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
     background-image: url('Imagens/serv-tree.png');
     background-position: center;
-    background-size: 36vh;
+    background-size: 10vh;
     background-repeat: no-repeat;
 }
+.container .card .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    color: #fff;
+}
+
+.container .card .slide {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .slide.slide1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: .7s;
+    transform: translateY(100px);
+}
+
+.container .card:hover .slide.slide1{
+    transform: translateY(0px);
+}
+
+.container .card .slide.slide2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: .8s;
+    transform: translateY(-100px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.container .card:hover .slide.slide2{
+    transform: translateY(0);
+}
+
+.container .card .slide.slide2::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    bottom: 15px;
+    left: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #dfdfdf;
+}
+
+.container .card .slide.slide2 .content p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #e9e9e9;
+}
+
+.container .card .slide.slide2 .content h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 24px;
+    text-align: center;
+    color: #dedede;
+} 
+/* Cards */
 
 /*intermediario*/
 
@@ -162,6 +244,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     font-size: 25px;
+    padding: 3vh;
 }
 /*footer*/
 /* 
@@ -181,5 +264,8 @@ body, html {
 } */
 
 
+/* teste */
 
 
+
+/* teste */
