@@ -51,13 +51,13 @@ body{
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-
+   
 }
 
 .loginBoxForm{
-    width: 80%;
-    height: 60%;
-    
+    width: 95%;
+    height: 80%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,7 +108,7 @@ body{
 
 .loginBoxForm Button{
     width: 100%;
-    height: 3vh;
+    height: 5vh;
     border: none;
     font-size: 1.5vh;
     color: white;

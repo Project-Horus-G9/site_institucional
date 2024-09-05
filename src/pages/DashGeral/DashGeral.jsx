@@ -3,8 +3,8 @@ import { IconButton, Toolbar, Link, Paper, AppBar, Typography, Container, Menu, 
 import style from './dashGeral.module.css';
 import { useNavigate } from 'react-router-dom';
 import Metrics from '../../components/metricsBox/metrics';
-import Chart from '../../components/chart/chartJs'
-
+import Chart from '../../components/lineChart/chartJs'
+import DoughnutChart from '../../components/dougnutChart/dougnut';
 
 function Dash() {
 
@@ -53,8 +53,7 @@ function Dash() {
                                         <div className={style.metricsBoxPhaseThree}>
 
                                             <div className={style.graphic}>
-                                                <Chart data={[12, 19, 3, 5, 2, 3]} dataTwo={[22, 22, 22, 22, 22, 22]} label='watts por mês' labelTwo='watts esperados por mês'
-                                                 labels={['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho']} title='Energia obtida x energia esperada por mês'/>
+                                                <DoughnutChart />
                                             </div>
                                             <div className={style.graphic}>
                                                 <Chart title='Quantidade de Manutenções por mês' data={[22, 9, 33, 25, 21, 3]} label='Manutenções por mês' 
@@ -63,7 +62,7 @@ function Dash() {
                                             <div className={style.graphic}>
                                                 <Chart title='Quantidade de substituições por mês' data={[2, 9, 3, 0, 1, 0]} label='substituições por mês' 
                                                 labels={['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho']} labelTwo='Teto de manutenções' dataTwo={[2, 2, 2, 2, 2, 2]}/>
-                                            </div>
+                                            </div> 
 
                                         </div>
 

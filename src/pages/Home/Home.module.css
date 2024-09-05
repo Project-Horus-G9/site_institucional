@@ -16,24 +16,25 @@ body {
     background-color: rgba(0, 0, 0, 0.452);
     display: flex;
     justify-content: right;
-    height: 5%;
+    height: 7%;
 
 }
 
 .divNavBar {
-    width: 12%;
+    width: 15%;
     height: 100%;
     display: flex;
     justify-content: space-between;
     padding: 4px;
     margin-right: 2%;
+
 }
 
 .divNavBar .bsignIn {
     background-color: #5e575760;
     color: rgba(245, 245, 245, 0.719);
     width: 45%;
-    height: 90%;
+    height: 100%;
 }
 
 .divNavBar .bLogin {
@@ -41,7 +42,7 @@ body {
     color: rgba(245, 245, 245, 0.719);
     width: 45%;
     border: 1px solid rgb(255, 255, 255);
-    height: 90%;
+    height: 100%;
 }
 
 .banner {
@@ -60,7 +61,7 @@ body {
 
 .shadowBanner {
     width: 100%;
-    height: 95%;
+    height: 93%;
     background-color: rgba(0, 0, 0, 0.452);
     display: flex;
     align-items: center;
@@ -245,20 +246,19 @@ body {
 
 .secondtBoxAfterBanner {
     width: 100%;
-    height: 70vh;
+    height: 100vh;
     background-image: url('/public/images/vecteezy_nascer-do-sol-no-egito-com-palmas_6173606.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-
     background-attachment: fixed;
 }
 
 .secondBoxAfterBannerLeftSide {
     width: 30%;
     height: 100%;
-    font-size: larger;
+    font-size: 3.5vh;
     padding: 7%;
     background-color: #FCEEEE;
 }
@@ -277,6 +277,7 @@ body {
     border-radius: 5px;
     background-color: #FCEEEE;
     padding: 10px;
+    
 }
 
 .thirdBoxAfterBannerTopSide {
@@ -299,8 +300,9 @@ body {
 
 .forthBoxAfterBanner {
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     display: flex;
+  
 }
 
 .forthBoxAfterBannerLeftSide {
@@ -352,7 +354,7 @@ body {
 
 .fifthBoxAfterBanner{
     width: 100%;
-    height: 20vh;
+    height: 30vh;
     background-color: #FCEEEE;
     display: flex;
     flex-direction: column;
