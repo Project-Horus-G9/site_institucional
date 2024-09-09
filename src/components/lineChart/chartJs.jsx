@@ -14,8 +14,8 @@ const LineChart = (props) => {
                 label: props.label,
                 data: props.data,
                 fill: true,
-                backgroundColor: '#E7AA73',
-                borderColor: '#E7AA73',
+                backgroundColor: props.lineColor,
+                borderColor: props.borderColor,
                 borderWidth: 2,
                 tension: 0.1,
                 pointRadius: 5, 
@@ -23,35 +23,63 @@ const LineChart = (props) => {
                 pointBorderColor: '#fff', 
                 pointBorderWidth: 2, 
             },
-            {
-                label: props.labelTwo,
-                data: props.dataTwo,
-                fill: true,
-                backgroundColor: 'yellow',
-                borderColor: 'yellow',
-                borderWidth: 2,
-                tension: 0.1,
-                pointRadius: 5, 
-                pointBackgroundColor: 'yellow',
-                pointBorderColor: '#fff', 
-                pointBorderWidth: 2, 
-            },
         ],
     };
 
     const options = {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                return `${tooltipItem.dataset.label}: ${tooltipItem.raw} ${props.medida}`;
+              },
+            },
+          },
+          annotation: { // Configurações para o plugin de anotação
+            annotations: {
+              line1: {
+                type: 'line',
+                borderColor: 'gray',
+                borderWidth: 2,
+                label: {
+                  content: 'Limite',
+                  enabled: true,
+                  position: 'end'
+                },
+                scaleID: 'y',
+                value: props.limite, // Valor da linha de limite
+              },
+              line2: {
+                type: 'line',
+                borderColor: 'white',
+                borderWidth: 2,
+                label: {
+                  content: 'Média',
+                  enabled: true,
+                  position: 'end'
+                },
+                scaleID: 'y',
+                value: props.media, // Valor da linha de valor médio
+              },
+            },
+          },
+        },
         scales: {
-            x: {
-                beginAtZero: true,
-            },
-            y: {
-                beginAtZero: true,
-            },
+          x: {
+            beginAtZero: true,
+          },
+          y: {
+            beginAtZero: true,
+          },
         },
     };
 
     return (
-        <div>
+        <div style={{width:'70%'}}>
             <h3>{props.title}</h3>
             <Line data={data} options={options} />
         </div>

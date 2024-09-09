@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import Metrics from '../../components/metricsBox/metrics';
 import Chart from '../../components/lineChart/chartJs'
 import DoughnutChart from '../../components/dougnutChart/dougnut';
+import BarChart from '../../components/barChart/barChart';
+import Informacoes from '../../components/infoUtil/Informacoes';
 
 function Dash() {
 
@@ -35,35 +37,32 @@ function Dash() {
 
                                         <div className={style.metricsBoxPhaseOne}>
 
-                                            <Metrics nomeMetrica='Taxa de eficiencia por hora' valorCliente='85' tipoMedida='%' />
-                                            <Metrics nomeMetrica='Área de irradiação solar por hora' valorCliente='85' tipoMedida='m' separador='-' valorLimite='150' tipoMedidaLimite='m' />
-                                            <Metrics nomeMetrica='Eficiencia por porcentatagem de obstrução' valorCliente='14' tipoMedida='%' separador='-' valorLimite='62' tipoMedidaLimite='%' />
-                                            <Metrics nomeMetrica='Eficiencia dos paineis por orientação/inclinação' valorCliente='55' tipoMedida='%' separador='-' valorLimite='Norte' separadorLimite='/' tipoMedidaLimite='32.2' />
-                                            <Metrics nomeMetrica='Taxa de eficiencia por setor' valorCliente='31' tipoMedida='%' />
+                                            <Metrics nomeMetrica='Tempo de vida medio dos paineis' valorCliente='5' tipoMedida='anos' />
+                                            <Metrics nomeMetrica='Área de irradiação solar por hora' valorCliente='85' tipoMedida='m' separador='/' valorLimite='150' tipoMedidaLimite='m' />
+                                            <Metrics nomeMetrica='Eficiencia por obstrução' valorCliente='14' tipoMedida='%' separador='/' valorLimite='62' tipoMedidaLimite='%' />
+                                            <Metrics nomeMetrica='Eficiencia por orientação/inclinação' valorCliente='55' tipoMedida='%' separador='-' valorLimite='Norte' separadorLimite='/' tipoMedidaLimite='32.2' />
+                                            <Metrics nomeMetrica='Taxa de eficiencia geral' valorCliente='63' tipoMedida='%' />
 
 
                                         </div>
-                                        <div className={style.metricsBoxPhaseTwo}>
-                                            <Metrics nomeMetrica='Nivel de obstrução Setor A' valorCliente='5' tipoMedida='%' />
-                                            <Metrics nomeMetrica='Nivel de obstrução Setor B' valorCliente='95' tipoMedida='%' />
-                                            <Metrics nomeMetrica='Nivel de obstrução Setor C' valorCliente='2' tipoMedida='%' />
-                                            <Metrics nomeMetrica='Nivel de obstrução Setor D' valorCliente='14' tipoMedida='%' />
-                                            <Metrics nomeMetrica='Nivel de obstrução Setor E' valorCliente='2' tipoMedida='%' />
-                                        </div>
+
                                         <div className={style.metricsBoxPhaseThree}>
 
                                             <div className={style.graphic}>
-                                                <DoughnutChart />
+                                                <Chart title='Eficiencia por hora' labels={[6,7,8,9,10]} label='Eficiencia' data={[11,22,10,70,90]} medida={'%'} media={50} lineColor={'yellow'} borderColor={'yellow'}/>
                                             </div>
                                             <div className={style.graphic}>
-                                                <Chart title='Quantidade de Manutenções por mês' data={[22, 9, 33, 25, 21, 3]} label='Manutenções por mês' 
-                                                labels={['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho']} labelTwo='Teto de manutenções' dataTwo={[33, 33, 33, 33, 33, 33]}/>
+                                                <BarChart title='Obstrução por setores' dataChart1={[5, 95, 2, 14]} dataChart2={[80, 5, 90, 62, 82]} labels={['A', 'B', 'C', 'D']} label1='Nivel de obstrução' label2='Nivel de eficiencia' medida='%' colorBarLeft={'rgba(255, 99, 132, 0.2)'} colorBorderBarLeft={'rgba(255, 99, 132, 1)'} colorBarRight={'rgba(234,240,70,60)'}/>
                                             </div>
                                             <div className={style.graphic}>
-                                                <Chart title='Quantidade de substituições por mês' data={[2, 9, 3, 0, 1, 0]} label='substituições por mês' 
-                                                labels={['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho']} labelTwo='Teto de manutenções' dataTwo={[2, 2, 2, 2, 2, 2]}/>
-                                            </div> 
+                                                <BarChart title='Irradiação por setores' dataChart1={[21.25, 21.25, 21.25, 21.25]} labels={['A', 'B', 'C', 'D']} label1='Nivel de Irradiação' medida='%' colorBarLeft={'gold'} colorBorderBarLeft={'white'} limite={37.5} label2='Eficiencia possivel por irradiação' dataChart2={[56.67, 56.67, 56.67, 56.67]} media={18.75} colorBarRight={'rgba(234,240,70,60)'}/>
+                                            </div>
 
+                                        </div>
+                                            
+                                        <div className={style.metricsBoxPhaseFour}>
+                                            <Informacoes nome='Tamanho dos setores:' info=' 37.2 m^2' title='Medidas' nome1='Tamanho da fazenda:' info1=' 150 m^2'/>
+                                          
                                         </div>
 
                                     </div>

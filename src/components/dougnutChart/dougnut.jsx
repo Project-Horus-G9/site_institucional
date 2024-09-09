@@ -1,21 +1,26 @@
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement } from 'chart.js';
-import { Style } from '@mui/icons-material';
+import { Style, WidthFull } from '@mui/icons-material';
 import estilo from '../dougnutChart/dougnut.module.css'
 
 ChartJS.register(Title, Tooltip, Legend, ArcElement);
 
-const DoughnutChart = () => {
+const DoughnutChart = (props) => {
+  
+  const totalValue = 100; 
+  const value = props.value; 
+
+  const adjustedData = [value, totalValue - value];
 
   const data = {
-    labels: ['Red', 'Blue', 'Yellow'],
+    labels: props.labels,
     datasets: [
       {
         label: 'My Dataset',
-        data: [300, 50, 100],
-        backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)'],
-        borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)'],
+        data: adjustedData,
+        backgroundColor: ['rgba(54, 162, 235, 0.2)','rgba(255, 99, 132, 0.2)', ],
+        borderColor: ['rgba(54, 162, 235, 1)','rgba(255, 99, 132, 1)'],
         borderWidth: 1,
       },
     ],
@@ -35,7 +40,7 @@ const DoughnutChart = () => {
               label += ': ';
             }
             if (context.parsed) {
-              label += `${context.parsed}%`;
+              label += `${context.parsed} %`;
             }
             return label;
           },
@@ -45,9 +50,11 @@ const DoughnutChart = () => {
   };
 
   return (
-    <div sytle={{border:'1px solid black'}}>
+    <div style={{width:'50%' }}>
+      <h3>{props.title}</h3>
       <Doughnut data={data} options={options} />
     </div>
+
   );
 };
 

@@ -14,7 +14,7 @@ function Metrics(props) {
                    <b>{props.nomeMetrica}</b> 
                 </div>
                 <div className={style.metricsValue}> 
-                    <div className={style.metricsGraph}> </div>
+                 
                     {props.valorCliente}{props.tipoMedida} {props.separador} {props.valorLimite}   {props.separadorLimite}{props.tipoMedidaLimite}
                 </div>
             </div>

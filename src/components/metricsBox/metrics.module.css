@@ -28,3 +28,12 @@
     font-size: larger;
 }
 
+.metricsGraph{
+    height: 70%;
+    width: 8vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
