@@ -86,7 +86,7 @@ const BarChart = (props) => {
   };
 
   return (
-    <div style={{width:'70%'}}>
+    <div style={{width:'100%', display:'flex', justifyContent:'center', flexDirection:'column',alignItems:'center'}}>
       <h3>{props.title}</h3>
       <Bar data={data} options={options} />
     </div>

@@ -10,8 +10,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-
-
 }
 
 .shadowBanner {
@@ -82,7 +80,7 @@ body {
 
 .metricsBoxPhaseOne {
     width: 100%;
-    height: 20%;
+    height: 40%;
     display: flex;
     justify-content: center;
     align-items: center;

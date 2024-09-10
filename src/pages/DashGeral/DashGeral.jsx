@@ -7,6 +7,7 @@ import Chart from '../../components/lineChart/chartJs'
 import DoughnutChart from '../../components/dougnutChart/dougnut';
 import BarChart from '../../components/barChart/barChart';
 import Informacoes from '../../components/infoUtil/Informacoes';
+import PieChart from '../../components/pieChart/pieChart';
 
 function Dash() {
 
@@ -38,7 +39,10 @@ function Dash() {
                                         <div className={style.metricsBoxPhaseOne}>
 
                                             <Metrics nomeMetrica='Tempo de vida medio dos paineis' valorCliente='5' tipoMedida='anos' />
-                                            <Metrics nomeMetrica='Área de irradiação solar por hora' valorCliente='85' tipoMedida='m' separador='/' valorLimite='150' tipoMedidaLimite='m' />
+                                            <Metrics 
+                                            
+                                            graph={<PieChart />}
+                                            nomeMetrica='Área de irradiação solar por hora'  separador='-' valorLimite='150' tipoMedidaLimite='m²' />
                                             <Metrics nomeMetrica='Eficiencia por obstrução' valorCliente='14' tipoMedida='%' separador='/' valorLimite='62' tipoMedidaLimite='%' />
                                             <Metrics nomeMetrica='Eficiencia por orientação/inclinação' valorCliente='55' tipoMedida='%' separador='-' valorLimite='Norte' separadorLimite='/' tipoMedidaLimite='32.2' />
                                             <Metrics nomeMetrica='Taxa de eficiencia geral' valorCliente='63' tipoMedida='%' />
@@ -60,10 +64,7 @@ function Dash() {
 
                                         </div>
                                             
-                                        <div className={style.metricsBoxPhaseFour}>
-                                            <Informacoes nome='Tamanho dos setores:' info=' 37.2 m^2' title='Medidas' nome1='Tamanho da fazenda:' info1=' 150 m^2'/>
-                                          
-                                        </div>
+                                  
 
                                     </div>
 
