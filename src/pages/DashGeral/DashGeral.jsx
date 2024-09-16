@@ -8,6 +8,9 @@ import DoughnutChart from '../../components/dougnutChart/dougnut';
 import BarChart from '../../components/barChart/barChart';
 import Informacoes from '../../components/infoUtil/Informacoes';
 import PieChart from '../../components/pieChart/pieChart';
+import BarKPIChart from '../../components/barKPIChart/barKPIChart';
+import Compass from '../../components/compass/compass';
+
 
 function Dash() {
 
@@ -39,13 +42,27 @@ function Dash() {
                                         <div className={style.metricsBoxPhaseOne}>
 
                                             <Metrics nomeMetrica='Tempo de vida medio dos paineis' valorCliente='5' tipoMedida='anos' />
-                                            <Metrics 
-                                            
-                                            graph={<PieChart />}
-                                            nomeMetrica='Área de irradiação solar por hora'  separador='-' valorLimite='150' tipoMedidaLimite='m²' />
-                                            <Metrics nomeMetrica='Eficiencia por obstrução' valorCliente='14' tipoMedida='%' separador='/' valorLimite='62' tipoMedidaLimite='%' />
-                                            <Metrics nomeMetrica='Eficiencia por orientação/inclinação' valorCliente='55' tipoMedida='%' separador='-' valorLimite='Norte' separadorLimite='/' tipoMedidaLimite='32.2' />
-                                            <Metrics nomeMetrica='Taxa de eficiencia geral' valorCliente='63' tipoMedida='%' />
+                                            <Metrics
+                                                graph={<PieChart />}
+                                                nomeMetrica='Área de irradiação solar por hora' valorLimite='150' tipoMedidaLimite='m²'
+                                            />
+                                            <Metrics
+                                                graph={'12'
+                                                }
+                                                nomeMetrica='Eficiencia por obstrução' valorCliente='14' tipoMedida='%' separador='/' valorLimite='62' tipoMedidaLimite='%'
+                                            />
+                                            <Metrics
+                                                graph={<div className={style.painel}>
+
+                                                </div>}
+                                                nomeMetrica='Eficiencia por orientação/inclinação' valorCliente='55' tipoMedida='%' separador='-' valorLimite='Norte' separadorLimite='/' tipoMedidaLimite='32.2'
+                                            />
+                                            <Metrics
+                                                graph={<div className={style.sol}>
+
+                                                </div>}
+                                                nomeMetrica='Taxa de eficiencia geral' valorCliente='63' tipoMedida='%'
+                                            />
 
 
                                         </div>
@@ -53,18 +70,18 @@ function Dash() {
                                         <div className={style.metricsBoxPhaseThree}>
 
                                             <div className={style.graphic}>
-                                                <Chart title='Eficiencia por hora' labels={[6,7,8,9,10]} label='Eficiencia' data={[11,22,10,70,90]} medida={'%'} media={50} lineColor={'yellow'} borderColor={'yellow'}/>
+                                                <Chart title='Eficiencia por hora' labels={[6, 7, 8, 9, 10]} label='Eficiencia' data={[11, 22, 10, 70, 90]} medida={'%'} media={50} lineColor={'rgba(224,123,57,0.7)'} borderColor={'rgba(224,123,57,0.7)'} bola={'#fae1ab'} bolaBorder={'rgba(224,123,57,0.7)'} />
                                             </div>
                                             <div className={style.graphic}>
-                                                <BarChart title='Obstrução por setores' dataChart1={[5, 95, 2, 14]} dataChart2={[80, 5, 90, 62, 82]} labels={['A', 'B', 'C', 'D']} label1='Nivel de obstrução' label2='Nivel de eficiencia' medida='%' colorBarLeft={'rgba(255, 99, 132, 0.2)'} colorBorderBarLeft={'rgba(255, 99, 132, 1)'} colorBarRight={'rgba(234,240,70,60)'}/>
+                                                <BarChart title='Obstrução por setores' dataChart1={[5, 95, 2, 14]} dataChart2={[80, 5, 90, 62, 82]} labels={['A', 'B', 'C', 'D']} label1='Nivel de obstrução' label2='Nivel de eficiencia' medida='%' colorBarLeft={'rgba(224,123,57,0.7)'} colorBorderBarLeft={'rgba(224,123,57,0.7)'} colorBarRight={'#fae1ab'} colorBorderBarRight={'#fae1ab'} />
                                             </div>
                                             <div className={style.graphic}>
-                                                <BarChart title='Irradiação por setores' dataChart1={[21.25, 21.25, 21.25, 21.25]} labels={['A', 'B', 'C', 'D']} label1='Nivel de Irradiação' medida='%' colorBarLeft={'gold'} colorBorderBarLeft={'white'} limite={37.5} label2='Eficiencia possivel por irradiação' dataChart2={[56.67, 56.67, 56.67, 56.67]} media={18.75} colorBarRight={'rgba(234,240,70,60)'}/>
+                                                <BarChart title='Irradiação por setores' dataChart1={[21.25, 21.25, 21.25, 21.25]} labels={['A', 'B', 'C', 'D']} label1='Nivel de Irradiação' medida='%' colorBarLeft={'rgba(224,123,57,0.7)'} colorBorderBarLeft={'rgba(224,123,57,0.7)'} limite={37.5} label2='Eficiencia possivel por irradiação' dataChart2={[56.67, 56.67, 56.67, 56.67]} media={18.75} colorBarRight={'#fae1ab'} colorBorderBarRight={'#fae1ab'}/>
                                             </div>
 
                                         </div>
-                                            
-                                  
+
+
 
                                     </div>
 

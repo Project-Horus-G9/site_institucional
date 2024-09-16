@@ -15,10 +15,12 @@ function Metrics(props) {
                     <b>{props.nomeMetrica}</b>
                 </div>
                 <div className={style.metricsValue}>
-                    <div style={{ width: '50%', height: '100%', border: '1px solid black' }}>
+                
+                    <div style={{ width: '50%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                         {props.graph}
                     </div>
-                    <div style={{ width: '50%', height: '100%', border: '1px solid black',display:'flex',justifyContent:'center', alignItems:'center' }}>
+                    -
+                    <div style={{ width: '50%', height: '100%', display:'flex',justifyContent:'center', alignItems:'center'}}>
                     {props.valorCliente}{props.tipoMedida} {props.separador} {props.valorLimite}   {props.separadorLimite}{props.tipoMedidaLimite}
                     </div>
                 </div>

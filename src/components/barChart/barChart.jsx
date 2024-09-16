@@ -62,7 +62,7 @@ const BarChart = (props) => {
           },
           line2: {
             type: 'line',
-            borderColor: 'gold',
+            borderColor: '#e28743',
             borderWidth: 2,
             label: {
               content: 'Média',

@@ -11,7 +11,21 @@ body {
     background-size: cover;
     display: flex;
 }
+.sol{
+    width: 100%;
+    height: 10vh;
+    background: url('/public/images/darkSun.png');
+    background-position: center;
+    background-size: cover;
+}
 
+.painel{
+    width: 15vh;
+    height: 15vh;
+    background: url('/public/images/darkPanel.png');
+    background-position: center;
+    background-size: cover;
+}
 .shadowBanner {
     width: 100%;
     height: 100%;

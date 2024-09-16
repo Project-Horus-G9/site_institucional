@@ -1,0 +1,9 @@
+/* CompassChart.css */
+.chart_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px; /* Ajuste conforme necessário */
+    height: 200px; /* Ajuste conforme necessário */
+  }
+  
