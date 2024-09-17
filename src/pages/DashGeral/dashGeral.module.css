@@ -26,6 +26,14 @@ body {
     background-position: center;
     background-size: cover;
 }
+
+.gota{
+    width: 10vh;
+    height: 10vh;
+    background: url('/public/images/Gotas.png');
+    background-position: center;
+    background-size: cover;
+}
 .shadowBanner {
     width: 100%;
     height: 100%;

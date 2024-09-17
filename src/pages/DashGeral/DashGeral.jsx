@@ -41,7 +41,11 @@ function Dash() {
 
                                         <div className={style.metricsBoxPhaseOne}>
 
-                                            <Metrics nomeMetrica='Tempo de vida medio dos paineis' valorCliente='5' tipoMedida='anos' />
+                                            <Metrics
+                                                graph={<div className={style.gota}>
+
+                                                </div>}
+                                                nomeMetrica='Taxa de umidade relativa' valorCliente='5' tipoMedida='%' />
                                             <Metrics
                                                 graph={<PieChart />}
                                                 nomeMetrica='Área de irradiação solar por hora' valorLimite='150' tipoMedidaLimite='m²'
@@ -76,7 +80,7 @@ function Dash() {
                                                 <BarChart title='Obstrução por setores' dataChart1={[5, 95, 2, 14]} dataChart2={[80, 5, 90, 62, 82]} labels={['A', 'B', 'C', 'D']} label1='Nivel de obstrução' label2='Nivel de eficiencia' medida='%' colorBarLeft={'rgba(224,123,57,0.7)'} colorBorderBarLeft={'rgba(224,123,57,0.7)'} colorBarRight={'#fae1ab'} colorBorderBarRight={'#fae1ab'} />
                                             </div>
                                             <div className={style.graphic}>
-                                                <BarChart title='Irradiação por setores' dataChart1={[21.25, 21.25, 21.25, 21.25]} labels={['A', 'B', 'C', 'D']} label1='Nivel de Irradiação' medida='%' colorBarLeft={'rgba(224,123,57,0.7)'} colorBorderBarLeft={'rgba(224,123,57,0.7)'} limite={37.5} label2='Eficiencia possivel por irradiação' dataChart2={[56.67, 56.67, 56.67, 56.67]} media={18.75} colorBarRight={'#fae1ab'} colorBorderBarRight={'#fae1ab'}/>
+                                                <BarChart title='Irradiação por setores' dataChart1={[21.25, 21.25, 21.25, 21.25]} labels={['A', 'B', 'C', 'D']} label1='Nivel de Irradiação' medida='%' colorBarLeft={'rgba(224,123,57,0.7)'} colorBorderBarLeft={'rgba(224,123,57,0.7)'} limite={37.5} label2='Eficiencia possivel por irradiação' dataChart2={[56.67, 56.67, 56.67, 56.67]} media={18.75} colorBarRight={'#fae1ab'} colorBorderBarRight={'#fae1ab'} />
                                             </div>
 
                                         </div>
