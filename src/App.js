@@ -1,21 +1,10 @@
-import { ThemeProvider } from "@mui/material/styles";
-import theme from "./styles/theme";
-import Router from "./Router";
-import React, { useEffect } from 'react';
+import React from 'react';
+import Rotas from './routes.js';
 
 function App() {
-  
-  useEffect(() => {
-    document.title = 'Horus';
-  }, []);
-
-  return (
-    <>
-      <ThemeProvider theme={theme}>
-        <Router />
-      </ThemeProvider>
-    </>
-  );
+    return (
+        <Rotas />
+    );
 }
 
 export default App;
