@@ -5,6 +5,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
 import { Box, Typography, TextField, Button } from "@mui/material";
 
+const acessToken = uuidv4();
+
 function Login() {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
@@ -12,7 +14,6 @@ function Login() {
     const [token, setToken] = useState('');
     const [tokenUser, setTokenUser] = useState('');
     const [showToken, setShowToken] = useState(false);
-    const acessToken = uuidv4();
     const [errorText, setErrorText] = useState('');
 
     const handleEnter = (event) => {
