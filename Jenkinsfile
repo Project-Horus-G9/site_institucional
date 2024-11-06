@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        REPO_URL = 'httpsgithub.comProject-Horus-G9site_institucional.git'
+        REPO_URL = 'https://github.com/Project-Horus-G9/site_institucional'
         DEPLOY_PATH = '/var/www/html' 
         SERVER_USER = 'ubuntu' 
         SERVER_HOST = '18.212.95.38' 
